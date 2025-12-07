@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react"
 import { useRef } from "react"
 import Navbar from './components/Navbar'
 import './App.css'
-import infiniteScroll from "./components/initeScroll"
+import infiniteScroll from "./components/infiniteScroll"
 
 
 function App() {
