@@ -1,0 +1,46 @@
+import { motion, useScroll, useTransform } from "motion/react"
+import { useRef } from "react"
+import Navbar from './components/Navbar'
+import './App.css'
+
+function App() {
+
+
+
+  // Track scroll progress of the entire page
+  const { scrollYProgress } = useScroll()
+
+  // Move background slightly for parallax
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0px", "200px"])
+
+  return (
+    <>
+      <motion.div
+
+        className='min-h-screen w-full bg-cover bg-center'
+        style={{
+          backgroundImage: 'url("/planets-wallpaper-3840x2160-mountains-planetary-geology-25662.jpg")',
+          backgroundPositionY: bgY
+        }}
+      >
+        <Navbar />
+
+        <div className="h-[200vh] flex flex-col items-center justify-center text-white text-4xl relative ">
+          <img src="./rocket_1-removebg-preview.png" className="z-1" alt="" />
+          <img src="./output-onlinegiftools (1).gif" width={'500px'} height={'600px'} className="rotate-180 z-3 absolute bottom-70  " alt="" />
+        </div>
+
+      </motion.div>
+
+
+      
+
+
+
+
+
+    </>
+  )
+}
+
+export default App
