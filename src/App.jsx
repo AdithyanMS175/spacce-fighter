@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react"
 import { useRef } from "react"
 import Navbar from './components/Navbar'
 import './App.css'
+import InfiniteScroll from "./components/infiniteScroll"
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0px", "200px"])
 
   return (
-    <>
+    <div>
       <motion.div
 
         className='min-h-screen w-full bg-cover bg-center'
@@ -30,16 +31,36 @@ function App() {
           <img src="./output-onlinegiftools (1).gif" width={'500px'} height={'600px'} className="rotate-180 z-3 absolute bottom-70  " alt="" />
         </div>
 
+
+
+
+
+
+
       </motion.div>
 
 
-      
+      <div className="bg-black py-20">
+        <InfiniteScroll
+          images={[
+            "https://images.pexels.com/photos/19210730/pexels-photo-19210730.jpeg",
+            "https://tse4.mm.bing.net/th/id/OIP.JlOZVfNiFX2WKUsTfvUBvAHaLH",
+            "https://images.pexels.com/photos/31299772/pexels-photo-31299772.jpeg",
+            "https://static.vecteezy.com/system/resources/previews/038/092/016/non_2x/ai-generated-giraffe-high-quality-image-free-photo.jpg",
+            "https://tse2.mm.bing.net/th/id/OIP.n5P8JThHx6Yn3LuVrxxkWQHaD5"
+          ]}
+         
+        />
+      </div>
 
 
 
 
 
-    </>
+
+
+
+    </div>
   )
 }
 
