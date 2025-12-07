@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useAnimationFrame } from "motion/react";
 import { useRef } from "react";
 
-export default function infiniteScroll({ images }) {
+export default function InfiniteScroll({ images }) {
     const containerRef = useRef();
     const x = useMotionValue(0);     
 

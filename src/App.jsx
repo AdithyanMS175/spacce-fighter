@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react"
 import { useRef } from "react"
 import Navbar from './components/Navbar'
 import './App.css'
-import infiniteScroll from "./components/infiniteScroll"
+import InfiniteScroll from "./components/infiniteScroll"
 
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
 
 
       <div className="bg-black py-20">
-        <infiniteScroll
+        <InfiniteScroll
           images={[
             "https://images.pexels.com/photos/19210730/pexels-photo-19210730.jpeg",
             "https://tse4.mm.bing.net/th/id/OIP.JlOZVfNiFX2WKUsTfvUBvAHaLH",
